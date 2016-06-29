@@ -111,11 +111,5 @@ chart = AmCharts.makeChart("chartdiv", {
 //        cursorPosition: "mouse",
 //        zoomable: true
     },
-    mouseWheelZoomEnabled: true,
+    mouseWheelZoomEnabled: true
 });
-
-chart.addListener("dataUpdated", zoomChart);
-zoomChart();
-function zoomChart() {
-    chart.zoomToIndexes(chartData.length - 250, chartData.length - 100);
-}
